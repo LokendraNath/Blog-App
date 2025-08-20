@@ -11,9 +11,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="grid grid-cols-1 mt-10 px-5">
-      <div className="my-10 border shadow-lg rounded-2xl px-4 py-5 hover:scale-102 hover:shadow-2xl transition-transform duration-200">
-        <div className="flex mb-3 w-full justify-between">
+    <div className="mt-10 grid grid-cols-1 px-5">
+      <div className="my-10 rounded-2xl border px-4 py-5 shadow-lg transition-transform duration-200 hover:scale-102 hover:shadow-2xl">
+        <div className="mb-3 flex w-full justify-between">
           <div className="flex space-x-2">
             <UserCircleIcon className="w-6" />
             <p>Lokendra Verma ·</p>
@@ -21,7 +21,7 @@ const Home = () => {
           </div>
           <PencilSquareIcon className="w-6" />
         </div>
-        <div className="flex flex-col space-y-2 mb-5">
+        <div className="mb-5 flex flex-col space-y-2">
           <h2 className="text-xl font-bold">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
             facere.
@@ -32,7 +32,7 @@ const Home = () => {
             Nisi.
           </p>
         </div>
-        <div className="flex w-full justify-between items-center px-3">
+        <div className="flex w-full items-center justify-between px-3">
           <div className="flex space-x-5">
             <div className="flex space-x-2">
               <ArrowUpCircleIcon className="w-5 cursor-pointer" />
