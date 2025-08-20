@@ -9,9 +9,9 @@ const Layout = () => {
   return (
     <div className="min-h-screen">
       <Header setSidebarOpen={setSidebarOpen} />
-      <div>
-        <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
-        <main>
+      <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
+      <div className="mt-10 py-10">
+        <main className="">
           <Outlet />
         </main>
       </div>
