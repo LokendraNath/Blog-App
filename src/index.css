@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Chrome, Edge, Safari */
+textarea::-webkit-scrollbar {
+  width: 8px; /* width customize kar sakte ho ya 0 set karo */
+}
+
+textarea::-webkit-scrollbar-button {
+  display: none; /* arrows hide karne ke liye */
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #888; /* scrollbar thumb color */
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+}

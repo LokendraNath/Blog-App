@@ -11,7 +11,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="grid grid-cols-1 space-y-5 px-5">
+    <div className="grid grid-cols-1 space-y-5">
       <div className="rounded-2xl border px-4 py-5 shadow-lg transition-transform duration-200 hover:scale-102 hover:shadow-2xl">
         <div className="mb-3 flex w-full justify-between">
           <div className="flex space-x-2">

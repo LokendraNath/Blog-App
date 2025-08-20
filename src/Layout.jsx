@@ -11,7 +11,7 @@ const Layout = () => {
       <Header setSidebarOpen={setSidebarOpen} />
       <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
       <div className="mt-10 py-10">
-        <main className="">
+        <main className="px-5">
           <Outlet />
         </main>
       </div>
