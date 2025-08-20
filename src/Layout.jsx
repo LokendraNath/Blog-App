@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen">

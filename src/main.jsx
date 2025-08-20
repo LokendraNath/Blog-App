@@ -6,9 +6,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreatePost from "./page/CreatePost.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Layout from "./Layout.jsx";
+import Home from "./page/Home.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Layout /> },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "create",
+        element: <CreatePost />,
+      },
+    ],
+  },
   { path: "/create", element: <CreatePost /> },
   { path: "*", element: <NotFound /> },
 ]);
