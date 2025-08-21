@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { PostContext } from "./PostContext";
 
+const STORAGE_KEY = "posts";
+
 const PostProvider = ({ children }) => {
-  const [posts, setPosts] = useState([
-    {
-      id: Date.now() + Math.floor(Math.random() * 1000),
-      title: "Example Using Home Data",
-      content: `As systems scale, teams grow, and complexity creeps in, 
-more senior engineers are switching to something else:
+  const [posts, setPosts] = useState(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch {}
 
-Hexagonal Architecture, also known as Ports and Adapters.
-
-It’s not a trend. It’s a practical shift born from real pain in production systems.
-
-Let’s walk through why.`,
-    },
-  ]);
+    return [
+      {
+        id: Date.now() + Math.floor(Math.random() * 1000),
+        title:
+          "We Removed All Design Patterns From Our Codebase. Here’s the Performance Impact",
+        content: `We Removed All Design Patterns From Our Codebase. Here’s the Performance Impact`,
+      },
+    ];
+  });
   useEffect(() => {
-    posts.forEach((p) => console.log(p));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+    } catch {}
   }, [posts]);
 
   return (
