@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             <div className="mb-5 flex flex-col space-y-2">
               <h2 className="text-xl font-bold">{p.title}</h2>
-              <p className="line-clamp-2 text-[17px]">{p.content}</p>
+              <p className="line-clamp-2 whitespace-pre-wrap text-[17px]">{p.content}</p>
             </div>
             <div className="flex w-full items-center justify-between px-3">
               <div className="flex space-x-5">

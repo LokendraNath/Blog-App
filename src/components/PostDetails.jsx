@@ -11,8 +11,8 @@ const PostDetails = () => {
 
   return (
     <div>
-      <h1>{postItem.title}</h1>
-      <p>{postItem.content}</p>
+      <h1 className="mb-5 text-3xl font-bold">{postItem.title}</h1>
+      <p className="text-lg whitespace-pre-wrap">{postItem.content}</p>
     </div>
   );
 };
