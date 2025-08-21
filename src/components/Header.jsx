@@ -33,7 +33,9 @@ const Header = ({ setSidebarOpen }) => {
             <NavLink to="/create">
               <PencilIcon className="w-6" />
             </NavLink>
-            <UserCircleIcon className="w-8" />
+            <NavLink to="/profile">
+              <UserCircleIcon className="w-8" />
+            </NavLink>
           </div>
         )}
       </div>

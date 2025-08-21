@@ -7,10 +7,11 @@ const CreatePost = () => {
         type="text"
         placeholder="Title"
         className="mb-5 border-none text-4xl outline-none"
+        autoFocus
       />
       <textarea
         placeholder="Write Your Story"
-        className="h-60 text-lg text-gray-600 resize-none outline-none"
+        className="h-60 resize-none text-lg text-gray-600 outline-none"
       ></textarea>
     </div>
   );

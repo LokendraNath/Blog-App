@@ -1,9 +1,13 @@
-function App() {
+import PostProvider from "./Context/PostProvider";
+import React from "react";
+import Layout from "./Layout";
+
+const App = () => {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <PostProvider>
+      <Layout />
+    </PostProvider>
   );
-}
+};
 
 export default App;

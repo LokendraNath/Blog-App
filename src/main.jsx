@@ -1,17 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreatePost from "./page/CreatePost.jsx";
 import NotFound from "./components/NotFound.jsx";
-import Layout from "./Layout.jsx";
 import Home from "./page/Home.jsx";
-
+import App from "./App.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
         index: true,
@@ -20,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "create",
         element: <CreatePost />,
+      },
+      {
+        path: "post",
+        element: <CreatePost />,
+      },
+      {
+        path: "profile",
+        element: <Home />, // TODO: replace with Profile page when implemented
       },
     ],
   },
@@ -30,5 +36,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
