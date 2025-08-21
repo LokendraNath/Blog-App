@@ -18,7 +18,7 @@ const CreatePost = () => {
   }
 
   return (
-    <div className="flex flex-col rounded-3xl px-5 py-5">
+    <div className="flex flex-col rounded-3xl px-5 py-5 lg:px-10">
       <div className="grid grid-cols-4 space-x-5">
         <input
           type="text"

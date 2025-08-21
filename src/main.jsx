@@ -5,12 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreatePost from "./page/CreatePost.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Home from "./page/Home.jsx";
-import App from "./App.jsx";
 import PostDetails from "./components/PostDetails.jsx";
+import Layout from "./Layout.jsx";
+import PostProvider from "./Context/PostProvider.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     children: [
       {
         index: true,
@@ -24,18 +25,15 @@ const router = createBrowserRouter([
         path: "post/:id",
         element: <PostDetails />,
       },
-      {
-        path: "profile",
-        element: <Home />,
-      },
     ],
   },
-  { path: "/create", element: <CreatePost /> },
   { path: "*", element: <NotFound /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <PostProvider>
+      <RouterProvider router={router} />
+    </PostProvider>
   </StrictMode>,
 );

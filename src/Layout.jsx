@@ -4,14 +4,12 @@ import Sidebar from "./components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <div className="min-h-screen">
-      <Header setSidebarOpen={setSidebarOpen} />
-      <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
-      <div className="mt-10 py-10">
-        <main className="px-5">
+      <Header />
+      <div className="mt-10 flex gap-4">
+        <Sidebar />
+        <main className="flex-1 px-5 py-10">
           <Outlet />
         </main>
       </div>

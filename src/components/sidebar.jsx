@@ -7,23 +7,17 @@ import {
   HomeIcon,
   PencilSquareIcon,
 } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+const Sidebar = () => {
+  const location = useLocation();
+
+  const isCreatePage = location.pathname === "/create";
   return (
     <div
-      className={`fixed top-0 z-50 bg-gray-100 min-h-screen w-54 px-5 py-4 transition-transform duration-300 ease-in-out ${
-        sidebarOpen ? "translate-x-0 shadow-xl" : "-translate-x-54"
-      }`}
+      className={`${isCreatePage && "hidden"} min-h-screen w-52 shrink-0 bg-gray-100 px-5 py-4 ease-in-out`}
     >
-      <div className="flex items-center gap-x-3">
-        <Bars3CenterLeftIcon
-          className="w-7 cursor-pointer"
-          onClick={() => setSidebarOpen((prev) => !prev)}
-        />
-        <h1 className="text-3xl font-bold">Blogstar</h1>
-      </div>
-      <ul className="mt-10 space-y-5 h-full">
+      <ul className="mt-10 h-full space-y-10">
         <li>
           <NavLink to="/" className="flex space-x-3">
             <HomeIcon className="w-7" />
