@@ -6,6 +6,7 @@ import CreatePost from "./page/CreatePost.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Home from "./page/Home.jsx";
 import App from "./App.jsx";
+import PostDetails from "./components/PostDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,12 +21,12 @@ const router = createBrowserRouter([
         element: <CreatePost />,
       },
       {
-        path: "post",
-        element: <CreatePost />,
+        path: "post/:id",
+        element: <PostDetails />,
       },
       {
         path: "profile",
-        element: <Home />, // TODO: replace with Profile page when implemented
+        element: <Home />,
       },
     ],
   },
