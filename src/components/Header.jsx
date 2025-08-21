@@ -25,9 +25,9 @@ const Header = ({ setSidebarOpen }) => {
           </NavLink>
         </div>
         {isCreatePage ? (
-          <button className="rounded-full bg-green-400 px-4 py-1 font-bold text-white">
-            Publish
-          </button>
+          <NavLink to="/profile">
+            <UserCircleIcon className="w-8" />
+          </NavLink>
         ) : (
           <div className="flex items-center gap-x-5">
             <NavLink to="/create">

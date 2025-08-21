@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PostContext } from "./PostContext";
 
 const PostProvider = ({ children }) => {
@@ -16,6 +16,9 @@ It’s not a trend. It’s a practical shift born from real pain in production s
 Let’s walk through why.`,
     },
   ]);
+  useEffect(() => {
+    posts.forEach((p) => console.log(p));
+  }, [posts]);
 
   return (
     <PostContext.Provider value={{ posts, setPosts }}>
